@@ -29,10 +29,10 @@ jobs:
           node-version: 22
           cache: pnpm
 
-      # @mind-studio/ui lives in another org's GitHub Packages registry,
-      # so the default GITHUB_TOKEN can't read it — use a PAT with read:packages.
+      # The GitHub Packages npm registry requires authentication even for
+      # public packages; the built-in GITHUB_TOKEN can read @mind-studio/ui.
       - name: Authenticate to GitHub Packages
-        run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.PACKAGES_TOKEN }}" >> .npmrc
+        run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> .npmrc
 
       - run: pnpm install --frozen-lockfile
 
