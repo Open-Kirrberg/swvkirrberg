@@ -1,4 +1,5 @@
 import { parseTheme } from "@mind-studio/ui";
+import { asset } from "@/lib/asset";
 
 /*
  * swv-kirrberg — Markentheme nach brand.md:
@@ -30,8 +31,8 @@ export const swvKirrberg = parseTheme(
     font: {
       sans: '"Source Sans 3", "Source Sans Pro", system-ui, sans-serif',
     },
-    logo: { light: "/images/wappen.png", dark: "/images/wappen.png" },
-    symbol: { light: "/images/wappen.png", dark: "/images/wappen.png" },
+    logo: { light: asset("/images/wappen.png"), dark: asset("/images/wappen.png") },
+    symbol: { light: asset("/images/wappen.png"), dark: asset("/images/wappen.png") },
     pattern: { kind: "dots", opacity: 0.05 },
   },
   { source: "swvkirrberg/src/lib/theme" },

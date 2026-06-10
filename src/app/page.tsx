@@ -14,6 +14,7 @@ import { OpenNowBadge } from "@/components/open-now-badge";
 import { kommendeTermine } from "@/data/termine";
 import { closedLabel, openingHours } from "@/lib/opening-hours";
 import { site } from "@/lib/site";
+import { asset } from "@/lib/asset";
 
 const einstiege = [
   {
@@ -21,7 +22,7 @@ const einstiege = [
     icon: UtensilsCrossed,
     title: "Einkehren",
     text: "Unsere Pächterin bietet innen wie außen Speisen und Getränke an – mit Aussicht bis weit in die Pfalz.",
-    image: "/images/huette-biergarten.jpg",
+    image: asset("/images/huette-biergarten.jpg"),
     cta: "Zur Hütte",
   },
   {
@@ -29,7 +30,7 @@ const einstiege = [
     icon: PartyPopper,
     title: "Feiern & Mieten",
     text: "Pavillon für ca. 40 Personen und Festwiese für große Feste, Hochzeiten und Zeltlager – ganzjährig mietbar.",
-    image: "/images/pavillon.jpg",
+    image: asset("/images/pavillon.jpg"),
     cta: "Zur Vermietung",
   },
   {
@@ -37,7 +38,7 @@ const einstiege = [
     icon: CalendarDays,
     title: "Mitwandern",
     text: "Geführte Touren mit ortskundigen Wanderführern – in der Regel einmal im Monat, Gäste sind willkommen.",
-    image: "/images/wandern-gruppe.jpg",
+    image: asset("/images/wandern-gruppe.jpg"),
     cta: "Zum Wanderplan",
   },
 ];
@@ -51,7 +52,7 @@ export default function HomePage() {
       <section className="relative">
         <div className="relative h-[60vh] min-h-[420px] w-full">
           <Image
-            src="/images/hero-sonnenuntergang.jpg"
+            src={asset("/images/hero-sonnenuntergang.jpg")}
             alt="Sonnenuntergang im Biergarten der Skihütte Kirrberg"
             fill
             priority
@@ -192,7 +193,7 @@ export default function HomePage() {
           </div>
           <div className="relative h-64 overflow-hidden rounded-lg">
             <Image
-              src="/images/gelaende-luftbild.jpg"
+              src={asset("/images/gelaende-luftbild.jpg")}
               alt="Luftbild des Vereinsgeländes mit Hütte, Pavillon und Grillhütte"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"

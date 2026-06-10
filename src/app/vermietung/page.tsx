@@ -14,6 +14,7 @@ import {
 } from "@/components/ui";
 import { Users } from "lucide-react";
 import { VermietungForm } from "@/components/vermietung-form";
+import { asset } from "@/lib/asset";
 
 export const metadata: Metadata = {
   title: "Vermietung – Pavillon & Festwiese",
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
 const objekte = [
   {
     name: "Pavillon",
-    image: "/images/pavillon.jpg",
+    image: asset("/images/pavillon.jpg"),
     alt: "Der Pavillon des SWV Kirrberg",
     preis: "130 € / Tag",
     preisDetail: "160 € inkl. Endreinigung",
@@ -33,7 +34,7 @@ const objekte = [
   },
   {
     name: "Festwiese (Outdoor Field)",
-    image: "/images/gelaende-luftbild.jpg",
+    image: asset("/images/gelaende-luftbild.jpg"),
     alt: "Luftbild der Festwiese mit Hütte und Pavillon",
     preis: "150 € / Tag",
     preisDetail: "Vermietung ganzjährig",
@@ -121,7 +122,7 @@ export default function VermietungPage() {
         </p>
         <div className="relative mt-4 h-[420px] overflow-hidden rounded-lg">
           <Image
-            src="/images/gelaende-plan.jpg"
+            src={asset("/images/gelaende-plan.jpg")}
             alt="Beschrifteter Geländeplan: Biergarten, Grill und Festwiese, Zeltplatz, Grillhütte zum Vermieten, Parkplatz, Bouleplatz, Wetterstation"
             fill
             sizes="(max-width: 1152px) 100vw, 1152px"

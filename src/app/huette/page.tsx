@@ -12,6 +12,7 @@ import { FileDown, Phone } from "lucide-react";
 import { OpenNowBadge } from "@/components/open-now-badge";
 import { closedLabel, openingHours } from "@/lib/opening-hours";
 import { site } from "@/lib/site";
+import { asset } from "@/lib/asset";
 
 export const metadata: Metadata = {
   title: "Hütte & Gastronomie",
@@ -21,19 +22,19 @@ export const metadata: Metadata = {
 
 const galerie = [
   {
-    src: "/images/huette-luftbild.jpg",
+    src: asset("/images/huette-luftbild.jpg"),
     alt: "Luftbild der Wanderhütte mit Biergarten",
   },
   {
-    src: "/images/huette-biergarten.jpg",
+    src: asset("/images/huette-biergarten.jpg"),
     alt: "Biergarten mit Blick über das Land",
   },
   {
-    src: "/images/hero-sonnenuntergang.jpg",
+    src: asset("/images/hero-sonnenuntergang.jpg"),
     alt: "Gäste im Biergarten bei Sonnenuntergang",
   },
   {
-    src: "/images/landschaft-sonnenuntergang.jpg",
+    src: asset("/images/landschaft-sonnenuntergang.jpg"),
     alt: "Sonnenuntergang über den Wiesen am Höhenweg",
   },
 ];
@@ -123,13 +124,13 @@ export default function HuettePage() {
         </p>
         <div className="mt-4 flex flex-wrap gap-3">
           <Button asChild>
-            <a href="/downloads/speisekarte.pdf" target="_blank" rel="noopener">
+            <a href={asset("/downloads/speisekarte.pdf")} target="_blank" rel="noopener">
               <FileDown className="size-4" />
               Speisekarte (PDF)
             </a>
           </Button>
           <Button asChild variant="outline">
-            <a href="/downloads/getraenkekarte.pdf" target="_blank" rel="noopener">
+            <a href={asset("/downloads/getraenkekarte.pdf")} target="_blank" rel="noopener">
               <FileDown className="size-4" />
               Getränkekarte (PDF)
             </a>

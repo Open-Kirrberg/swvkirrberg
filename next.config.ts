@@ -7,6 +7,8 @@ const basePath = process.env.NODE_ENV === "production" ? "/swvkirrberg" : "";
 const nextConfig: NextConfig = {
   output: "export",
   basePath,
+  // Exposed to client code so the asset() helper can prefix static asset paths.
+  env: { NEXT_PUBLIC_BASE_PATH: basePath },
   // GitHub Pages can't run the Next.js image optimizer.
   images: { unoptimized: true },
   // Avoids redirect issues for nested routes on static hosting.

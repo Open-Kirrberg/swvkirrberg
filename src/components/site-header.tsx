@@ -14,6 +14,7 @@ import {
   SheetTrigger,
   cn,
 } from "@/components/ui";
+import { asset } from "@/lib/asset";
 
 const navItems = [
   { href: "/", label: "Start" },
@@ -36,7 +37,7 @@ export function SiteHeader() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4">
         <Link href="/" className="flex items-center gap-3">
           <Image
-            src="/images/wappen.png"
+            src={asset("/images/wappen.png")}
             alt="Wappen SWV Kirrberg"
             width={40}
             height={46}

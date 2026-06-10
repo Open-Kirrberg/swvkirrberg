@@ -11,6 +11,7 @@ import {
 } from "@/components/ui";
 import { FileDown, Mail } from "lucide-react";
 import { mailto, site } from "@/lib/site";
+import { asset } from "@/lib/asset";
 
 export const metadata: Metadata = {
   title: "Verein",
@@ -61,7 +62,7 @@ export default function VereinPage() {
         <Card className="overflow-hidden pt-0">
           <div className="relative h-56 w-full">
             <Image
-              src="/images/wandern-gruppe.jpg"
+              src={asset("/images/wandern-gruppe.jpg")}
               alt="Wandergruppe des SWV Kirrberg auf einem Felsen"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -80,7 +81,7 @@ export default function VereinPage() {
         <Card className="overflow-hidden pt-0">
           <div className="relative h-56 w-full">
             <Image
-              src="/images/boule-team.jpg"
+              src={asset("/images/boule-team.jpg")}
               alt="Die Boule-Mannschaft des SWV Kirrberg"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -169,7 +170,7 @@ export default function VereinPage() {
             </a>
           </Button>
           <Button asChild variant="outline">
-            <a href="/downloads/satzung-2022.pdf" target="_blank" rel="noopener">
+            <a href={asset("/downloads/satzung-2022.pdf")} target="_blank" rel="noopener">
               <FileDown className="size-4" />
               Vereinssatzung (Stand 2022, PDF)
             </a>

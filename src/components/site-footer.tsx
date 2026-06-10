@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/lib/site";
+import { asset } from "@/lib/asset";
 
 export function SiteFooter() {
   return (
@@ -8,7 +9,7 @@ export function SiteFooter() {
       <div className="mx-auto grid max-w-6xl gap-8 px-4 py-12 md:grid-cols-3">
         <div className="flex items-start gap-3">
           <Image
-            src="/images/wappen.png"
+            src={asset("/images/wappen.png")}
             alt="Wappen SWV Kirrberg"
             width={48}
             height={55}

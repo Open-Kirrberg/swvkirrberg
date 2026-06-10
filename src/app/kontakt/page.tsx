@@ -10,6 +10,7 @@ import {
 } from "@/components/ui";
 import { CloudSun, Mail, MapPin, Phone } from "lucide-react";
 import { site } from "@/lib/site";
+import { asset } from "@/lib/asset";
 
 export const metadata: Metadata = {
   title: "Kontakt & Anfahrt",
@@ -100,7 +101,7 @@ export default function KontaktPage() {
 
       <div className="relative mt-8 h-[380px] overflow-hidden rounded-lg">
         <Image
-          src="/images/gelaende-plan.jpg"
+          src={asset("/images/gelaende-plan.jpg")}
           alt="Geländeplan mit Biergarten, Festwiese, Zeltplatz, Parkplatz, Bouleplatz und Wetterstation"
           fill
           sizes="(max-width: 1152px) 100vw, 1152px"
