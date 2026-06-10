@@ -8,6 +8,7 @@ on:
 # Allow the workflow to publish to Pages.
 permissions:
   contents: read
+  packages: read
   pages: write
   id-token: write
 
