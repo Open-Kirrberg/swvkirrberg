@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import {
   Badge,
   Button,
@@ -105,6 +106,11 @@ export default function VereinPage() {
               .
             </CardDescription>
           </CardHeader>
+          <CardContent>
+            <Button asChild variant="outline">
+              <Link href="/boule">Zum Spielplan 2026</Link>
+            </Button>
+          </CardContent>
         </Card>
       </div>
 
