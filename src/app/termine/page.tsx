@@ -10,8 +10,9 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui";
-import { MapPin } from "lucide-react";
+import { Download, MapPin } from "lucide-react";
 import { type Anspruch, termine, treffpunkt, wanderplanStand } from "@/data/termine";
+import { asset } from "@/lib/asset";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -24,6 +25,7 @@ const anspruchVariant: Record<Anspruch, string> = {
   Leicht: "bg-[oklch(0.95_0.02_158)] text-[oklch(0.32_0.08_158)]",
   Mittel: "bg-[oklch(0.93_0.06_90)] text-[oklch(0.4_0.08_90)]",
   Schwer: "bg-[oklch(0.93_0.06_29)] text-[oklch(0.4_0.12_29)]",
+  "Nicht angegeben": "bg-muted text-muted-foreground",
 };
 
 export default function TerminePage() {
@@ -86,6 +88,16 @@ export default function TerminePage() {
           </Table>
         </CardContent>
       </Card>
+
+      <a
+        className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-primary underline"
+        href={asset("/downloads/wanderplan-2026.pdf")}
+        target="_blank"
+        rel="noreferrer"
+      >
+        <Download className="size-4" />
+        Wanderplan 2026 als PDF herunterladen
+      </a>
 
       <p className="mt-4 text-sm text-muted-foreground">
         Geführte Touren mit ortskundigen Wanderführern. Alle Angaben ohne Gewähr –
