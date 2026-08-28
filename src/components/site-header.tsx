@@ -21,6 +21,7 @@ const navItems = [
   { href: "/huette", label: "Hütte" },
   { href: "/vermietung", label: "Vermietung" },
   { href: "/termine", label: "Termine" },
+  { href: "/boule", label: "Boule" },
   { href: "/verein", label: "Verein" },
   { href: "/kontakt", label: "Kontakt" },
 ];
